@@ -3,9 +3,9 @@ public class Person {
 	private int id;
 	private String firstName;
 	private String lastName;
-	private String type;
+	private Type type;
 	
-	public Person(int id, String firstName, String lastName, String type) {
+	public Person(int id, String firstName, String lastName, Type type) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -40,11 +40,11 @@ public class Person {
 		this.lastName = lastName;
 	}
 
-	public String getType() {
+	public Type getType() {
 		return type;
 	}
 
-	public void setType(String type) {
+	public void setType(Type type) {
 		this.type = type;
 	}
  }

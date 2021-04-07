@@ -23,9 +23,25 @@ public class AirportSecurityApp {
 		s.nextLine();
 		System.out.print("Last name: ");
 		String lastName = s.nextLine();
-		System.out.print("Type of passenger: ");
-		String type = s.nextLine();
-		app.add(new Person(id, firstName, lastName, type));
+		System.out.println("Type of passenger: ");
+		System.out.println("1. STAFF");
+		System.out.println("2. VIP");
+		System.out.println("3. ECONOMY");
+		System.out.print("Press the number matched with the type: ");
+		int tmp = s.nextInt();
+		Type type;
+		if(tmp == 1) {
+			type = Type.STAFF;
+			app.add(new Person(id, firstName, lastName, type));
+		}
+		if(tmp == 2) {
+			type = Type.VIP;
+			app.add(new Person(id, firstName, lastName, type));
+		}
+		if(tmp == 3) {
+			type = Type.ECONOMY;
+			app.add(new Person(id, firstName, lastName, type));
+		}	
 		//I DON'T KNOW HOW TO FIX THIS PART BUT IT SHOWS "Resource leak: 's' is never closed."
 	}
 	
